@@ -1,7 +1,0 @@
-{
-    "parent": "supplementaries:special_models/plants/simple/bush",
-    "ambientocclusion": false,
-    "textures": {
-        "flower": "violetcoloured:block/potted_wild_rice"
-    }
-}
