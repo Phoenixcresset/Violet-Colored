@@ -7,20 +7,6 @@
       recipeId: "minecraft:red_nether_bricks",
     },
   ];
-  const surroundedRecipes = [
-    {
-      ingredient: "minecraft:glass",
-      surroundedItem: "supplementaries:ash",
-      output: "quark:dirty_glass",
-      recipeId: "quark:tweaks/crafting/glass/mixed_dirty_glass",
-    },
-    {
-      ingredient: "minecraft:glass_pane",
-      surroundedItem: "supplementaries:ash",
-      output: "quark:dirty_glass_pane",
-      recipeId: "quark:tweaks/crafting/glass/dirty_glass_pane_from_glass_pane",
-    },
-  ];
 
   const dyedRecipes = [
     {
@@ -34,20 +20,7 @@
       recipeId:
         "quark:building/crafting/panes/{color}_framed_glass_pane_from_framed_glass_pane",
     },
-  ];
-
-  const bricksRecipes = [
-    {
-      ingredient: "minecraft:dirt",
-      output: "quark:dirt_bricks",
-      recipeId: "quark:building/crafting/dirt_bricks",
-    },
-    {
-      ingredient: "minecraft:netherrack",
-      output: "quark:netherrack_bricks",
-      recipeId: "quark:building/crafting/netherrack_bricks",
-    },
-  ];
+  ]
 
   const removedRecipesIds = [
     // Removed to avoid recipe conflicts
@@ -82,14 +55,6 @@
     }
   }
 
-  function bricksRecipe(event, { ingredient, output, recipeId }) {
-    event
-      .shaped(Item.of(output, 4), ["II", "II"], {
-        I: ingredient,
-      })
-      .id(recipeId);
-  }
-
   ServerEvents.recipes((event) => {
     for (const recipe of shapelessRecipes) {
       event
@@ -100,16 +65,8 @@
         .id(recipe.recipeId);
     }
 
-    for (const recipe of surroundedRecipes) {
-      surroundWithItemRecipe(event, recipe);
-    }
-
     for (const recipe of dyedRecipes) {
       dyedRecipe(event, recipe);
-    }
-
-    for (const recipe of bricksRecipes) {
-      bricksRecipe(event, recipe);
     }
 
     for (const recipeId of removedRecipesIds) {

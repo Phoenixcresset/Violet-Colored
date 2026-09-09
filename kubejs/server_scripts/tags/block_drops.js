@@ -4,8 +4,6 @@
   const blocksToSelfDrop = [
     "minecraft:glass",
     "minecraft:glass_pane",
-    "quark:dirty_glass",
-    "quark:dirty_glass_pane",
     "minecraft:chiseled_bookshelf",
   ];
 
