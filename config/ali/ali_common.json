@@ -129,24 +129,6 @@
       ]
     },
     {
-      "key": "quark:oretoise",
-      "type": "GAMEPLAY",
-      "icon": "quark:toretoise_spawn_egg",
-      "hide": false,
-      "pattern": [
-        "^quark:toretoise/.*$"
-      ]
-    },
-    {
-      "key": "quark:stoneling",
-      "type": "GAMEPLAY",
-      "icon": "quark:stoneling_spawn_egg",
-      "hide": false,
-      "pattern": [
-        "^quark:misc/stoneling_carry$"
-      ]
-    },
-    {
       "key": "ali:gameplay_loot",
       "type": "GAMEPLAY",
       "icon": "minecraft:compass",

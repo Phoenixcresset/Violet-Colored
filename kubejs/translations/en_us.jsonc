@@ -8,9 +8,6 @@
   "firstperson": {
     "key.firstperson.toggle": "Toggle First Person Model"
   },
-  "measurements": {
-    "item.measurements.tape_measure": "Abacus"
-  },
   "sootychimneys": {
     // Prevents the open / close messages when interacting with a chimney
     "message.sootychimneys.blocked": "",
